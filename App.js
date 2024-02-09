@@ -5,8 +5,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const SplashScreen = ({navigation}) => {
 
-  // const navigation = useNavigart
-
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <TouchableOpacity 
