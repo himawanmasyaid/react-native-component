@@ -6,6 +6,8 @@ import LoginScreen from "./screen/LoginScreen";
 import SplashScreen from "./screen/SplashScreen";
 import HomeScreen from "./screen/HomeScreen";
 import DetailScreen from "./screen/DetailScreen";
+import BoardingScreen from "./screen/BoardingScreen";
+import NavigationItem from "./navigation/NavigationItem";
 
 // const SplashScreen = ({navigation}) => {
 
@@ -40,10 +42,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="splash" component={SplashScreen} />
+        <Stack.Screen name="splash" component={SplashScreen} options={ {headerShown: false} } />
         <Stack.Screen name="home" component={HomeScreen} />
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="detail" component={DetailScreen} />
+        <Stack.Screen name="boarding" component={BoardingScreen} options={ {headerShown: false} }/>
       </Stack.Navigator>
     </NavigationContainer>
   );
