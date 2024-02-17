@@ -7,41 +7,31 @@ import SplashScreen from "./screen/SplashScreen";
 import HomeScreen from "./screen/HomeScreen";
 import DetailScreen from "./screen/DetailScreen";
 import BoardingScreen from "./screen/BoardingScreen";
-
-// const SplashScreen = ({navigation}) => {
-
-//   return (
-//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//       <TouchableOpacity 
-//         onPress={() => 
-//           navigation.navigate('home', {name: 'Jane'})
-//         }
-//       >
-//         <Text>Go to Home</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-// }
-
-// const HomepageScreen = ({navigation, route}) => {
-
-//   return (
-//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//       <TouchableOpacity>
-//         <Text>Hello {route.params.name}, Back to Splash</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-
-// }
+import { useFonts } from 'expo-font';
+import React, { useState, useEffect } from 'react';
 
 const Stack= createNativeStackNavigator();
 
 export default function App() {
+
+  const [setIsLoading] = useState(true);
+
+  const [fontsLoaded] = useFonts({
+    'lato_regular': require('./assets/fonts/lato_regular.ttf'),
+    'lato_bold': require('./assets/fonts/lato_bold.ttf'),
+    'lato_black': require('./assets/fonts/lato_black.ttf'),
+  });
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      // setIsLoading(false);
+    }
+  }, [fontsLoaded]);
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="splash" component={SplashScreen} options={ {headerShown: false} } />
+        <Stack.Screen name="splash" component={LoginScreen} options={ {headerShown: false} } />
         <Stack.Screen name="home" component={HomeScreen} />
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="detail" component={DetailScreen} />

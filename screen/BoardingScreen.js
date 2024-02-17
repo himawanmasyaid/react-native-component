@@ -26,7 +26,6 @@ const BoardingScreen = ({navigation}) => {
     ref?.current.scrollToOffset({offset});
     setCurrentSlideIndex(lastSlideIndex);
   };
-
   const Footer = () => {
     return (
       <View
@@ -62,7 +61,7 @@ const BoardingScreen = ({navigation}) => {
           {currentSlideIndex == slides.length - 1 ? (
             <View style={{height: 50}}>
               <TouchableOpacity
-                style={styles.btn}
+                style={styles.button}
                 onPress={() => navigation.navigate('login')}>
                 <Text style={{fontWeight: 'bold', fontSize: 15}}>
                   GET STARTED
@@ -74,7 +73,7 @@ const BoardingScreen = ({navigation}) => {
               <TouchableOpacity
                 activeOpacity={0.8}
                 style={[
-                  styles.btn,
+                  styles.button,
                   {
                     borderColor: COLORS.white,
                     borderWidth: 1,
@@ -95,7 +94,7 @@ const BoardingScreen = ({navigation}) => {
               <TouchableOpacity
                 activeOpacity={0.8}
                 onPress={goToNextSlide}
-                style={styles.btn}>
+                style={styles.button}>
                 <Text
                   style={{
                     fontWeight: 'bold',
@@ -198,7 +197,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 3,
     borderRadius: 2,
   },
-  btn: {
+  button: {
     flex: 1,
     height: 50,
     borderRadius: 5,
