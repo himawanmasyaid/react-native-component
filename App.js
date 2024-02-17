@@ -7,7 +7,6 @@ import SplashScreen from "./screen/SplashScreen";
 import HomeScreen from "./screen/HomeScreen";
 import DetailScreen from "./screen/DetailScreen";
 import BoardingScreen from "./screen/BoardingScreen";
-import NavigationItem from "./navigation/NavigationItem";
 
 // const SplashScreen = ({navigation}) => {
 
