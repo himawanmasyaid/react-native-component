@@ -1,18 +1,18 @@
-import React, { Component } from "react";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "navigation/RootStackParamList";
+import React from "react";
 import {
+  View,
   Text,
   StyleSheet,
-  View,
   Touchable,
   Button,
   TouchableOpacity,
   TextInput,
   SafeAreaView,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { useFonts } from "expo-font";
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({navigation} : NativeStackScreenProps<RootStackParamList>) => {
   const [text, onChangeText] = React.useState("Useless Text");
 
   return (
@@ -45,23 +45,23 @@ const LoginScreen = ({ navigation }) => {
             placeholder="Masukkan Email..."
           />
 
-          <Text style={[{ marginTop: 24, marginBottom: 6 }, styles.body2]}>Password</Text>
-        
+          <Text style={[{ marginTop: 24, marginBottom: 6 }, styles.body2]}>
+            Password
+          </Text>
+
           <TextInput
             style={styles.inputBoxRounded}
             onChangeText={onChangeText}
             placeholder="Masukkan Password..."
           />
-          
         </View>
 
         <View style={styles.bottom}>
           <TouchableOpacity
             style={styles.button}
             onPress={() =>
-              navigation.navigate("home", {
+              navigation.navigate('home', {
                 name: "Himawan",
-                role: "Android Engineer",
               })
             }
           >
