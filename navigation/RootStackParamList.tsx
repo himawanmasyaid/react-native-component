@@ -8,10 +8,6 @@ export type RootStackParamList = {
     home : { name: string },
 }
 
-// Props
-// export type LoginScreenProps = NativeStackScreenProps<RootStackParamList>
-// export type HomeScreenProps = NativeStackScreenProps<RootStackParamList>
-
 // Routes
 export type HomeScreenRouteProps = RouteProp<RootStackParamList, "home">
 
