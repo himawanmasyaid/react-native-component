@@ -6,6 +6,7 @@ import {
   StyleSheet,
   FlatList,
   Image,
+  Pressable,
 } from "react-native";
 import { NavigationContainer, useRoute } from "@react-navigation/native";
 import {
@@ -26,7 +27,7 @@ const HomeScreen = ({
   type ComponentProp = { title: string };
 
   const ComponentItem = ({ title }: ComponentProp) => (
-    <View style={styles.item}>
+    <View style={styles.item} >
       <Text style={styles.sub1}>{title}</Text>
       <Text style={ [ styles.body1, { marginTop: 8}]}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
     </View>
@@ -55,7 +56,21 @@ const HomeScreen = ({
         <FlatList
           style={{ flex: 1, marginTop: 18 }}
           data={ComponentListData}
-          renderItem={({ item }) => <ComponentItem title={item.title} />}
+          renderItem={({ item }) =>
+          <TouchableOpacity onPress={ () => 
+            {
+              if(typeof item.navigate === 'string' && item.navigate.length === 0) {
+                console.log(item.title, 'data string is empty')
+                
+              } else {
+                console.log('sukses')
+                navigation.navigate(item.navigate)
+              }
+            }
+          }>
+            <ComponentItem title={item.title} />
+          </TouchableOpacity>
+          }
           keyExtractor={(item) => item.title}
         />
       </View>
@@ -86,7 +101,6 @@ const styles = StyleSheet.create({
   },
 
   item: {
-    // backgroundColor: "#e5f5fd",
     backgroundColor: "#f7fafd",
     flex: 1,
     padding: 20,
@@ -143,13 +157,48 @@ const styles = StyleSheet.create({
 
 const ComponentListData = [
   {
-    title: "TextView",
+    title: "Text View",
     navigate: "text",
     icon: "",
   },
   {
+    title: "Text Input",
+    navigate: '',
+    icon: "",
+  },
+  {
     title: "Button",
-    navigate: "button",
+    navigate: "",
+    icon: "",
+  },
+  {
+    title: "Badges",
+    navigate: "",
+    icon: "",
+  },
+  {
+    title: "Card",
+    navigate: "",
+    icon: "",
+  },
+  {
+    title: "Carousel",
+    navigate: "",
+    icon: "",
+  },
+  {
+    title: "Checkbox",
+    navigate: "",
+    icon: "",
+  },
+  {
+    title: "Modal",
+    navigate: "",
+    icon: "",
+  },
+  {
+    title: "ScroolView",
+    navigate: "",
     icon: "",
   },
 ];
