@@ -61,7 +61,7 @@ const HomeScreen = ({
             {
               if(typeof item.navigate === 'string' && item.navigate.length === 0) {
                 console.log(item.title, 'data string is empty')
-                
+
               } else {
                 console.log('sukses')
                 navigation.navigate(item.navigate)
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
 
   header: {
     backgroundColor: "#fff",
-    flexDirection: "row", // vertical
+    flexDirection: "row", // horizontal | center
     justifyContent: "space-between", // horizontal
     alignItems: "center",
     height: 60,
@@ -163,7 +163,7 @@ const ComponentListData = [
   },
   {
     title: "Text Input",
-    navigate: '',
+    navigate: 'textinput',
     icon: "",
   },
   {
