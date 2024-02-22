@@ -168,7 +168,7 @@ const ComponentListData = [
   },
   {
     title: "Button",
-    navigate: "",
+    navigate: "button",
     icon: "",
   },
   {
