@@ -8,6 +8,7 @@ export type RootStackParamList = {
     home : { name: string },
     text : undefined,
     textinput : undefined,
+    card : undefined,
 }
 
 // Routes

@@ -61,9 +61,7 @@ const HomeScreen = ({
             {
               if(typeof item.navigate === 'string' && item.navigate.length === 0) {
                 console.log(item.title, 'data string is empty')
-
               } else {
-                console.log('sukses')
                 navigation.navigate(item.navigate)
               }
             }
@@ -172,12 +170,16 @@ const ComponentListData = [
     icon: "",
   },
   {
-    title: "Badges",
-    navigate: "",
-    icon: "",
+    title: "Card",
+    navigate: "card",
+    icon: "card",
   },
   {
-    title: "Card",
+    title: "Grid",
+    navigate: "grid",
+  },
+  {
+    title: "Badges",
     navigate: "",
     icon: "",
   },
