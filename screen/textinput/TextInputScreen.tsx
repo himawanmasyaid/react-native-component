@@ -15,11 +15,8 @@ const TextInputScreen = ({
 }: NativeStackScreenProps<RootStackParamList>) => {
   {
     /* State : digunakan untuk menyimpan data input sementara
-    
       set digunakan untuk menyimpan data di variable state
-
     */
-  
   }
   const [defaultInput, setDefaultInput] = React.useState("");
   const [fullname, setFullName] = React.useState("");
@@ -71,9 +68,21 @@ const TextInputScreen = ({
               onChangeText={(value) => setPassword(value)}
               secureTextEntry={isHiddenPassword}
             />
-            <TouchableOpacity onPress={() => setHiddenPassword(!isHiddenPassword)}>
-              <Text style={[ styles.textShow, { position: "absolute", right: 16, bottom: 12, justifyContent: "center" }]}>
-                { isHiddenPassword ? "Show" : "Hide"}
+            <TouchableOpacity
+              onPress={() => setHiddenPassword(!isHiddenPassword)}
+            >
+              <Text
+                style={[
+                  styles.textShow,
+                  {
+                    position: "absolute",
+                    right: 16,
+                    bottom: 12,
+                    justifyContent: "center",
+                  },
+                ]}
+              >
+                {isHiddenPassword ? "Show" : "Hide"}
               </Text>
             </TouchableOpacity>
           </View>
@@ -171,11 +180,8 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: "600",
-    fontFamily: "Lato",
+    fontFamily: "lato_regular",
   },
-
-
-
 });
 
 export default TextInputScreen;

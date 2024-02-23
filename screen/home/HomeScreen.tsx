@@ -60,7 +60,7 @@ const HomeScreen = ({
           <TouchableOpacity onPress={ () => 
             {
               if(typeof item.navigate === 'string' && item.navigate.length === 0) {
-                console.log(item.title, 'data string is empty')
+                alert("'data string is empty")
               } else {
                 navigation.navigate(item.navigate)
               }
@@ -179,11 +179,16 @@ const ComponentListData = [
     navigate: "statusbar",
   },
   {
-    title: "Grid",
-    navigate: "grid",
+    title: "Dropdown Select Option ",
+    navigate: "dropdown",
   },
   {
-    title: "Badges",
+    title: "Radio Button",
+    navigate: "",
+    icon: "",
+  },
+  {
+    title: "Check Box",
     navigate: "",
     icon: "",
   },
@@ -193,17 +198,12 @@ const ComponentListData = [
     icon: "",
   },
   {
-    title: "Checkbox",
+    title: "Date Picker",
     navigate: "",
     icon: "",
   },
   {
-    title: "Modal",
-    navigate: "",
-    icon: "",
-  },
-  {
-    title: "ScroolView",
+    title: "Modal Dialog",
     navigate: "",
     icon: "",
   },

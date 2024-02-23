@@ -49,9 +49,6 @@ const StatusBarScreen = ({
 
   return (
     <SafeAreaView style={styles.container}>
-
-
-
       <StatusBar
         animated={true}
         backgroundColor="#61dafb"

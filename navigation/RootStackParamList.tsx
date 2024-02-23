@@ -10,6 +10,7 @@ export type RootStackParamList = {
     textinput : undefined,
     card : undefined,
     statusbar : undefined,
+    dropdown : undefined,
 }
 
 // Routes

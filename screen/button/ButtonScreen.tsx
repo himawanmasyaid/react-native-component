@@ -53,7 +53,7 @@ const ButtonScreen = ({
               alert("FLoating Text is pressed");
             }}
           >
-            <Text style={styles.textButtonFloating}>ADD</Text>
+            <Text style={styles.textButtonFloating}>ALERT</Text>
           </TouchableOpacity>
           {/* Floating Image */}
           <TouchableOpacity
