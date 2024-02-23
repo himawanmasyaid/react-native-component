@@ -8,6 +8,7 @@ import TextScreen from 'screen/text/TextScreen';
 import TextInputScreen from 'screen/textinput/TextInputScreen';
 import ButtonScreen from 'screen/botton/ButtonScreen';
 import CardScreen from 'screen/card/CardScreen';
+import StatusBarScreen from 'screen/statusbar/StatusBarScreen';
 
 
 const RootStack = createStackNavigator();
@@ -23,6 +24,7 @@ const RootNavigator = () => {
         <RootStack.Screen name="textinput" component={TextInputScreen} options={ {headerShown: true} } />
         <RootStack.Screen name="button" component={ButtonScreen} options={ {headerShown: true} } />
         <RootStack.Screen name="card" component={CardScreen} options={ {headerShown: true} } />
+        <RootStack.Screen name="statusbar" component={StatusBarScreen} options={ {headerShown: true} } />
       </RootStack.Navigator>
     </NavigationContainer>
   )

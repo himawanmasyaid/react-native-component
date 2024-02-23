@@ -175,6 +175,10 @@ const ComponentListData = [
     icon: "card",
   },
   {
+    title: "Status Bar",
+    navigate: "statusbar",
+  },
+  {
     title: "Grid",
     navigate: "grid",
   },

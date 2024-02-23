@@ -25,7 +25,7 @@ const CardScreen = ({
             Horizontal Card Sample
           </Text>
 
-          <View style={{flexDirection:"row"}}>
+          <View style={{ flexDirection: "row" }}>
             <View style={[stylesProduct.container, stylesProduct.shadow]}>
               <Image
                 style={{ width: 100, height: 100 }}
