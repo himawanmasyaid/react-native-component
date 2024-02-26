@@ -183,6 +183,11 @@ const ComponentListData = [
     navigate: "dropdown",
   },
   {
+    title: "People Restfull Api",
+    navigate: "people",
+    icon: "",
+  },
+  {
     title: "Radio Button",
     navigate: "",
     icon: "",
