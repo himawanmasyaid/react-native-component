@@ -39,7 +39,7 @@ const HomeScreen = ({
         <View style={styles.header}>
           <Text style={styles.sub2}>React Component</Text>
           <View
-            style={{ padding: 4, backgroundColor: "#3d4a36", borderRadius: 30 }}
+            style={{backgroundColor: "#3d4a36", borderRadius: 30 }}
           >
             <Image
               style={{ width: 30, height: 30 }}
@@ -48,7 +48,7 @@ const HomeScreen = ({
           </View>
         </View>
         <Text style={[{ marginTop: 24, marginStart: 16 }, styles.h1]}>
-          Halo {route.params.name}
+          Halo {'Himawan'}
         </Text>
         <Text style={[{ marginTop: 8, marginStart: 16 }, styles.body1]}>
           Components Built with React Native

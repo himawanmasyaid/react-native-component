@@ -16,9 +16,7 @@ const SplashScreen = ({navigation}: NativeStackScreenProps<RootStackParamList>) 
 
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => navigation.navigate('home', {
-                name: "Himawan",
-              })}>
+      <Pressable onPress={() => navigation.navigate('main')}>
         <Image
           style={{ width: 100, height: 100 }}
           source={require("../../assets/images/ic_react.png")}
